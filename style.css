@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofadi+One&family=Varela+Round&display=swap');
+body {
+  background-color: antiquewhite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: 'Sofadi One', system-ui;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 65px;
+  background-color: black;
+  color: white;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  padding: 0 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.brand img {
+  width: 44px;
+  padding: 0 8px;
+}
+
+.container {
+  height: 62vh;
+  background-color: black;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  width: 70%;
+  margin: 23px auto;
+  border-radius: 12px;
+  padding: 34px;
+  background-image: url('bg.jpg');
+}
+
+.bottom {
+  position: sticky;
+  height: 130px;
+  background-color: black;
+  color: white;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  margin-top: 14px;
+}
+
+.icons i {
+  cursor: pointer;
+}
+
+#myProgressBar {
+  width: 80vw;
+}
+
+.songItemContainer {
+  margin-top: 74px;
+}
+
+.songItem {
+  height: 50px;
+  display: flex;
+  background-color: white;
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.songItem img {
+  width: 63px;
+  margin: 0 23px 0;
+  border-radius: 34px;
+}
+
+.timestamp {
+  margin: 0 23px;
+}
+
+.timestamp i {
+  cursor: pointer;
+}
+
+.songInfo {
+  position: absolute;
+  left: 10vw;
+}
+
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .songItem {
+    flex-direction: column; /* Stack item contents */
+    align-items: flex-start; /* Align items to the start */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .songItem img {
+    width: 50px; /* Smaller image for mobile */
+  }
+
+  .brand {
+    font-size: 1.1rem; /* Smaller brand font size */
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column; /* Stack navigation items */
+  }
+
+  .brand {
+    font-size: 1rem; /* Further reduce brand font size */
+  }
+
+  .timestamp {
+    margin: 0 10px; /* Reduce margin */
+  }
+}
